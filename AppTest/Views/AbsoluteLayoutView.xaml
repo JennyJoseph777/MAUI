@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             x:Class="AppTest.Views.AbsoluteLayoutView">
+   
+    
+    <ContentPage.Content>
+        
+        <StackLayout  Padding="{x:OnIdiom Phone='10', Tablet='15'}" BackgroundColor="White">
+
+            <Frame Padding="0" CornerRadius="5" IsClippedToBounds="True" HasShadow="True" TouchEffect.NativeAnimationColor="White" 
+                         TouchEffect.NormalAnimationDuration="100"  TouchEffect.PressedOpacity="0.9"
+                          BackgroundColor="{StaticResource Primary}"                            
+                           TouchEffect.NativeAnimation="{OnIdiom  Phone= {OnPlatform iOS=False, Android=True},
+                             Tablet= {OnPlatform Android=True}}">
+
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" CommandParameter="{Binding .}" NumberOfTapsRequired="1"/>
+                </Frame.GestureRecognizers>
+
+                <AbsoluteLayout x:Name="EventsViewLayout" HeightRequest="{x:OnIdiom Phone='350', Tablet='500'}" WidthRequest="{x:OnIdiom Phone='375', Tablet='750'}"
+                         IsClippedToBounds="True">
+                  
+                    <Image Source="maui.png" BackgroundColor="{StaticResource Primary}"                    
+                         AbsoluteLayout.LayoutBounds="1,1,1,1" AbsoluteLayout.LayoutFlags="All"  
+                         HeightRequest="{x:OnIdiom Phone='350', Tablet='350'}" WidthRequest="{x:OnIdiom Phone='375', Tablet='950'}" 
+                         Aspect="AspectFit" />
+
+
+                    <StackLayout x:Name="ViewControls" Padding="{x:OnIdiom Phone='3,0,2,0', Tablet='11,0,7,0'}" Orientation="Vertical" Margin="{OnIdiom Phone='5', Tablet='8'}" 
+                          BackgroundColor="#66000000" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
+                          AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="{x:OnIdiom Phone='0.4,0.5,1.03,1.02', Tablet='0.8,0.5,1,1.04'}">
+
+                        <StackLayout HorizontalOptions="StartAndExpand" Margin="5,10,2,0">
+                            <Label Text=".NET Multi-platform App UI" TextColor="White"  LineBreakMode="TailTruncation" 
+                                FontSize="{x:OnIdiom Phone='Medium', Tablet='Medium'}" VerticalOptions="StartAndExpand" HorizontalOptions="FillAndExpand"
+                                VerticalTextAlignment="Start" Style="{StaticResource Objektiv Mk1 XBold}" ></Label>
+                        </StackLayout>
+
+                        <StackLayout VerticalOptions="EndAndExpand" Margin="5,0,2,8">
+                            <Label Text=".NET Multi-platform App UI (.NET MAUI) is a cross-platform framework for creating native mobile and desktop apps with C# and XAML." MaxLines="{x:OnIdiom Phone='2', Tablet='2'}" LineBreakMode="TailTruncation" TextColor="White" HorizontalOptions="FillAndExpand"
+                                VerticalOptions="EndAndExpand" VerticalTextAlignment="Start" Style="{StaticResource Objektiv Mk1 Light}" 
+                                FontSize="{x:OnIdiom Phone='Body', Tablet='Medium'}" FontAttributes="None"/>
+                        </StackLayout>
+
+                    </StackLayout>
+
+                </AbsoluteLayout>
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

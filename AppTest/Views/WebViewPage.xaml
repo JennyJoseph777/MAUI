@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppTest.Views.WebViewPage" BackgroundColor="Black" Title="Web View">
+   
+    
+    <ContentPage.Content>
+        <VerticalStackLayout Padding="10,0"
+                        Spacing="19">
+
+            <Frame BackgroundColor="Orange" CornerRadius="5"  Padding="20" Margin="10" 
+              HorizontalOptions="FillAndExpand" 
+              VerticalOptions="CenterAndExpand">
+
+                <Label Text="Opening Web View inside the App" Style="{StaticResource Objektiv Mk1 XBold}" TextColor="Black" HorizontalOptions="CenterAndExpand" FontSize="Header"></Label>
+
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                </Frame.GestureRecognizers>
+            </Frame>
+
+
+            <Frame BackgroundColor="Orange" CornerRadius="5" Padding="20" Margin="10"   
+                      HorizontalOptions="FillAndExpand" 
+                      VerticalOptions="CenterAndExpand">
+
+                <Label Text="Opening Web View Directly on the Browser" Style="{StaticResource Objektiv Mk1 XBold}" TextColor="Black" HorizontalOptions="CenterAndExpand" FontSize="Header"></Label>
+
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1" />
+                </Frame.GestureRecognizers>
+            </Frame>
+
+        </VerticalStackLayout>
+    </ContentPage.Content>
+</ContentPage>

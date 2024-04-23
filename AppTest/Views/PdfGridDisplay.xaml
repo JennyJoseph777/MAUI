@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://schemas.microsoft.com/dotnet/2022/maui/toolkit" 
+             xmlns:d="http://schemas.microsoft.com/dotnet/2021/maui/design"
+             x:Class="AppTest.Views.PdfGridDisplay" BackgroundColor="Black" Title="PDF Grid">
+
+
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="{StaticResource Primary}" >
+         
+                                <StackLayout>
+                                    <Frame HeightRequest="400" WidthRequest="300" BorderColor ="Black" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" 
+                                       BackgroundColor="White" Padding="0" HasShadow="True" Margin="30" CornerRadius="10" 
+                                       TouchEffect.NativeAnimationColor="WhiteSmoke" TouchEffect.NormalAnimationDuration="100" >
+
+
+                                        <TouchEffect.NativeAnimation>
+                                            <OnPlatform x:TypeArguments="x:Boolean">
+                                                <On Platform="iOS" Value="False" />
+                                                <On Platform="Android" Value="True" />
+                                            </OnPlatform>
+                                        </TouchEffect.NativeAnimation>
+
+                                        <TouchEffect.PressedOpacity>
+                                            <OnPlatform x:TypeArguments="x:Double">
+                                                <On Platform="iOS" Value="0.5" />
+                                                <On Platform="Android" Value="0.9" />
+                                            </OnPlatform>
+                                        </TouchEffect.PressedOpacity>
+
+                                        <Frame.GestureRecognizers>
+                                              <TapGestureRecognizer Tapped="FAQ_ImageButton_Clicked" CommandParameter="{Binding .}"
+                                          NumberOfTapsRequired="1"/>
+                                        </Frame.GestureRecognizers>
+                                        
+                                        <Grid>
+                                            <StackLayout BackgroundColor="WhiteSmoke">
+                                               <ImageButton Source="testfileimage.png"   Padding="0,10,0,0"            
+                                                        HeightRequest="357" 
+                                                        Aspect="AspectFit"
+                                                        CommandParameter="{Binding .}"
+                                                        Clicked="FAQ_ImageButton_Clicked"></ImageButton>
+                                            </StackLayout>
+
+                                            <StackLayout>
+                                                <Label Text="Drylab News for Investors and Friends" TextColor="{StaticResource Primary}" FontSize="Small"  Padding="5" 
+                                                       HorizontalTextAlignment="Center" VerticalOptions="EndAndExpand" BackgroundColor="White" Style="{StaticResource Objektiv Mk1 XBold}" 
+                                                       HorizontalOptions="FillAndExpand" FontAttributes="Bold" ></Label>
+                                            </StackLayout>
+                                        </Grid>
+                                    </Frame>
+                           </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

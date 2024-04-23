@@ -1,0 +1,81 @@
+﻿<?xml version = "1.0" encoding = "UTF-8" ?>
+<Application xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:AppTest"
+             x:Class="AppTest.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Primary">Black</Color>
+            <Color x:Key="StatusBarColor">Black</Color>
+            <Color x:Key="NavigationBarColor">Black</Color>
+
+            <Style TargetType="NavigationPage">
+                <Setter Property="BarBackgroundColor"
+                        Value="Black" />
+                <Setter Property="BarTextColor"
+                        Value="White" />
+            </Style>
+
+            <!-- ................................................Font Objektiv.................................................................. -->
+
+            <Style x:Key="Objektiv Mk1 XBold"
+                         TargetType="Label">
+                <Setter Property="FontFamily">
+                    <Setter.Value>
+                        <OnPlatform x:TypeArguments="x:String">
+                            <On Platform="Android"
+                     Value="Objektiv Mk1 XBold.ttf#Objektiv Mk1" />
+                            <On Platform="iOS"
+                     Value="Objektiv Mk1 XBold" />
+                        </OnPlatform>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+            <Style x:Key="Objektiv Mk1 Light"
+                          TargetType="Label">
+                <Setter Property="FontFamily">
+                    <Setter.Value>
+                        <OnPlatform x:TypeArguments="x:String">
+                            <On Platform="Android"
+                     Value="Objektiv Mk1 Light.ttf#Objektiv Mk1" />
+                            <On Platform="iOS"
+                     Value="Objektiv Mk1 Light" />
+                        </OnPlatform>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+
+            <!--.....................................................Font Awesome New.........................................................................-->
+           
+            <OnPlatform x:TypeArguments="x:String"
+             x:Key="FontAwesomeBrands">
+                <On Platform="Android"
+                 Value="Font Awesome 6 Brands-Regular-400.otf" />
+                <On Platform="iOS"
+                 Value="Font Awesome 6 Brands-Regular-400.otf" />
+
+
+            </OnPlatform>
+
+            <OnPlatform x:TypeArguments="x:String"
+             x:Key="FontAwesomeSolid">
+                <On Platform="Android"
+                 Value="Font Awesome 6 Free-Solid-900.otf" />
+                <On Platform="iOS"
+                 Value="Font Awesome 6 Free-Solid-900.otf" />
+
+            </OnPlatform>
+
+            <OnPlatform x:TypeArguments="x:String"
+             x:Key="FontAwesomeRegular">
+                <On Platform="Android"
+                 Value="Font Awesome 6 Free-Regular-400.otf" />
+                <On Platform="iOS"
+                Value="Font Awesome 6 Free-Regular-400.otf" />
+
+            </OnPlatform>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

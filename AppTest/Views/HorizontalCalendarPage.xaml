@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<StackLayout xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://schemas.microsoft.com/dotnet/2022/maui/toolkit" 
+             xmlns:d="http://schemas.microsoft.com/dotnet/2021/maui/design"
+             x:Name="this"
+             xmlns:models="clr-namespace:AppTest.Models.Antonis"
+             x:Class="AppTest.Views.HorizontalCalendarPage" BackgroundColor="Black" Padding="3,20" HeightRequest="150">
+
+
+    <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" Orientation="Horizontal" Margin="5">
+        <Label Text="{Binding Source={x:Reference this}, Path=SelectedDate, StringFormat='{0:MMMM yyyy}'}" FontSize="Title" FontAttributes="Bold" 
+           TextColor="White" HorizontalOptions="CenterAndExpand">
+        </Label>
+    </StackLayout>
+
+    <CollectionView ItemsSource="{Binding Source={x:Reference this}, Path=Dates}"  ItemsLayout="HorizontalGrid" HorizontalScrollBarVisibility="Never"  >
+        <CollectionView.ItemTemplate>
+            <DataTemplate x:DataType="models:CalendarModel">
+                <StackLayout >
+
+                    <Frame  Padding="{x:OnIdiom Phone='5,4,5,3', Tablet='10,9,10,7'}" Margin="4"  HasShadow="False" 
+                           WidthRequest="{x:OnIdiom Phone='65', Tablet='70'}" HeightRequest="{x:OnIdiom Phone='65', Tablet='70'}" HorizontalOptions="FillAndExpand" >
+
+                        <StackLayout>
+
+                            <Label Text="{Binding Date, StringFormat='{0:ddd}'}"   HorizontalTextAlignment="Center" FontAttributes="Bold" FontSize="{x:OnIdiom Phone='Body', Tablet='Medium'}" 
+                                   Style="{StaticResource Objektiv Mk1 XBold}">
+                                <Label.Triggers>
+                                    <DataTrigger TargetType="Label" Binding="{Binding IsCurrentDate}" Value="True">
+                                        <Setter Property="TextColor" Value="WhiteSmoke"></Setter>
+                                    </DataTrigger>
+                                    <DataTrigger TargetType="Label" Binding="{Binding IsCurrentDate}" Value="False">
+                                        <Setter Property="TextColor" Value="Black"></Setter>
+                                    </DataTrigger>
+                                </Label.Triggers>
+                            </Label>
+
+                            <!--    ____________________________________________________________________Date Label____________________________________________________________________________________________________________ -->
+
+
+                            <Label Text="{Binding Date, StringFormat='{0:dd}'}"  HorizontalTextAlignment="Center" FontSize="{x:OnIdiom Phone='Body', Tablet='Medium'}"  
+                                   Style="{StaticResource Objektiv Mk1 Light}">
+                                <Label.Triggers>
+                                    <DataTrigger TargetType="Label" Binding="{Binding IsCurrentDate}" Value="True">
+                                        <Setter Property="TextColor" Value="WhiteSmoke"></Setter>
+                                    </DataTrigger>
+                                    <DataTrigger TargetType="Label" Binding="{Binding IsCurrentDate}" Value="False">
+                                        <Setter Property="TextColor" Value="Black"></Setter>
+                                    </DataTrigger>
+                                </Label.Triggers>
+                            </Label>
+
+                        </StackLayout>
+
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer  Tapped="TapGestureRecognizer_Tapped" CommandParameter="{Binding .}" NumberOfTapsRequired="1"/>
+                        </Frame.GestureRecognizers>
+
+                        <Frame.Triggers>
+                            <DataTrigger TargetType="Frame" Binding="{Binding IsCurrentDate}" Value="False">
+                                <Setter Property="BackgroundColor" Value="WhiteSmoke"></Setter>
+                            </DataTrigger>
+
+                            <DataTrigger TargetType="Frame" Binding="{Binding IsCurrentDate}" Value="True">
+                                <Setter Property="BackgroundColor" Value="#014289"></Setter>
+                            </DataTrigger>
+                        </Frame.Triggers>
+                    </Frame>
+                </StackLayout>
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+    </CollectionView>
+</StackLayout>

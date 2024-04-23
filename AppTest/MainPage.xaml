@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:fa="clr-namespace:AppTest.Helpers"
+             x:Class="AppTest.MainPage" BackgroundColor="Orange" Title="APP">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="10,0" Spacing="19">
+
+
+            <!--...........................................PDF Display..........................................................-->
+            
+            <Frame   Padding="20" Margin="10" BackgroundColor="DarkOliveGreen" CornerRadius="5"    
+                     HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" 
+                     TouchEffect.NativeAnimationColor="WhiteSmoke" TouchEffect.NormalAnimationDuration="100"  
+                     TouchEffect.NativeAnimation="{OnIdiom  Phone= {OnPlatform iOS=False, Android=True}, Tablet= {OnPlatform Android=True}}"
+                     TouchEffect.PressedOpacity="{OnIdiom  Phone= {OnPlatform iOS=0.4, Android=0.9}, Tablet= {OnPlatform Android=0.9}}">
+
+
+                <Label Text="PDF Display" Style="{StaticResource Objektiv Mk1 XBold}" TextColor="White" HorizontalOptions="CenterAndExpand"  FontSize="Header"></Label>
+
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                </Frame.GestureRecognizers>
+            </Frame>
+
+            <!--........................................Scrollable Horizontal Calendar Display......................................................-->
+            
+            <Frame   Padding="10" Margin="10" BackgroundColor="DarkOliveGreen" CornerRadius="5"    
+                     HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand"
+                      TouchEffect.NativeAnimationColor="WhiteSmoke" TouchEffect.NormalAnimationDuration="100"  
+                      TouchEffect.NativeAnimation="{OnIdiom  Phone= {OnPlatform iOS=False, Android=True}, Tablet= {OnPlatform Android=True}}"
+                      TouchEffect.PressedOpacity="{OnIdiom  Phone= {OnPlatform iOS=0.4, Android=0.9}, Tablet= {OnPlatform Android=0.9}}">
+
+
+                <Label Text="Scrollable Horizontal Calendar View" Style="{StaticResource Objektiv Mk1 XBold}" TextColor="White" 
+                       HorizontalOptions="FillAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="Header"></Label>
+
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1" />
+                </Frame.GestureRecognizers>
+            </Frame>
+
+            <!--......................................................Web View Display..................................................................-->
+           
+            <Frame   Padding="20" Margin="10" BackgroundColor="DarkOliveGreen" CornerRadius="5"    
+                         HorizontalOptions="FillAndExpand"  VerticalOptions="CenterAndExpand"
+                         TouchEffect.NativeAnimationColor="WhiteSmoke" TouchEffect.NormalAnimationDuration="100"  
+                         TouchEffect.NativeAnimation="{OnIdiom  Phone= {OnPlatform iOS=False, Android=True}, Tablet= {OnPlatform Android=True}}"
+                         TouchEffect.PressedOpacity="{OnIdiom  Phone= {OnPlatform iOS=0.4, Android=0.9}, Tablet= {OnPlatform Android=0.9}}">
+
+
+                <Label Text="Web View" TextColor="White" Style="{StaticResource Objektiv Mk1 XBold}" HorizontalOptions="CenterAndExpand" FontSize="Header"></Label>
+
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_2" />
+                </Frame.GestureRecognizers>
+            </Frame>
+ 
+     <!--.......................................................................... Usage of Icons............................................................................-->
+            
+            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Spacing="7">
+
+                <Frame BorderColor="Black" BackgroundColor="Transparent" CornerRadius="8" HeightRequest="90" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                    <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+                                    <Image>
+                                        <Image.Source>
+                                            <FontImageSource
+                                       FontFamily="Solid6"
+                                       Color="Black"
+                                       Size="{x:OnIdiom Phone='25', Tablet='28'}"              
+                                       Glyph="{x:Static fa:FontAwesomeIconsNew.UserTie}">
+                                            </FontImageSource>
+                                        </Image.Source>
+                                    </Image>
+
+                                    <Label Text="Employee"  TextColor="Black" Style="{StaticResource Objektiv Mk1 XBold}" Padding="5" 
+                                               VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
+                                               FontSize="{OnIdiom  Phone= {OnPlatform iOS=13, Android=14}, Tablet= {OnPlatform Android=16}}">
+                                    </Label>
+                         </StackLayout>
+                    </Frame>
+
+                <Frame BorderColor="Black" BackgroundColor="Transparent" CornerRadius="8" HeightRequest="90" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                    <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+                            <Image>
+                                <Image.Source>
+                                    <FontImageSource
+                           FontFamily="Solid6"
+                           Color="Black"
+                           Size="{x:OnIdiom Phone='25', Tablet='28'}"               
+                           Glyph="{x:Static fa:FontAwesomeIconsNew.CircleInfo}">
+                                    </FontImageSource>
+                                </Image.Source>
+                            </Image>
+
+                            <Label Text="Info"  TextColor="Black" Style="{StaticResource Objektiv Mk1 XBold}"  Padding="5"
+                                   VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
+                                   FontSize="{OnIdiom  Phone= {OnPlatform iOS=13, Android=14}, Tablet= {OnPlatform Android=16}}">
+                            </Label>
+                        </StackLayout>
+                    </Frame>
+                
+            </StackLayout>
+  
+    <!--.....................................................................Using Absolute Layout...........................................................................-->
+           
+            <Frame   Padding="20" Margin="10" BackgroundColor="DarkOliveGreen" CornerRadius="5"    
+                     HorizontalOptions="FillAndExpand"  VerticalOptions="CenterAndExpand"
+                     TouchEffect.NativeAnimationColor="WhiteSmoke" TouchEffect.NormalAnimationDuration="100"  
+                     TouchEffect.NativeAnimation="{OnIdiom  Phone= {OnPlatform iOS=False, Android=True}, Tablet= {OnPlatform Android=True}}"
+                     TouchEffect.PressedOpacity="{OnIdiom  Phone= {OnPlatform iOS=0.4, Android=0.9}, Tablet= {OnPlatform Android=0.9}}">
+
+
+                <Label Text="Absolute Layout View" TextColor="White" Style="{StaticResource Objektiv Mk1 XBold}" HorizontalOptions="CenterAndExpand" FontSize="Header"></Label>
+
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_3" />
+                </Frame.GestureRecognizers>
+            </Frame>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
