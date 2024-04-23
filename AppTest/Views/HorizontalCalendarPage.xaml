@@ -5,12 +5,12 @@
              xmlns:d="http://schemas.microsoft.com/dotnet/2021/maui/design"
              x:Name="this"
              xmlns:models="clr-namespace:AppTest.Models.Antonis"
-             x:Class="AppTest.Views.HorizontalCalendarPage" BackgroundColor="Black" Padding="3,20" HeightRequest="150">
+             x:Class="AppTest.Views.HorizontalCalendarPage" BackgroundColor="#31473A" Padding="3,20" HeightRequest="150">
 
 
     <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" Orientation="Horizontal" Margin="5">
         <Label Text="{Binding Source={x:Reference this}, Path=SelectedDate, StringFormat='{0:MMMM yyyy}'}" FontSize="Title" FontAttributes="Bold" 
-           TextColor="White" HorizontalOptions="CenterAndExpand">
+           TextColor="#E7E8D1" HorizontalOptions="CenterAndExpand">
         </Label>
     </StackLayout>
 
@@ -28,7 +28,7 @@
                                    Style="{StaticResource Objektiv Mk1 XBold}">
                                 <Label.Triggers>
                                     <DataTrigger TargetType="Label" Binding="{Binding IsCurrentDate}" Value="True">
-                                        <Setter Property="TextColor" Value="WhiteSmoke"></Setter>
+                                        <Setter Property="TextColor" Value="#E7E8D1"></Setter>
                                     </DataTrigger>
                                     <DataTrigger TargetType="Label" Binding="{Binding IsCurrentDate}" Value="False">
                                         <Setter Property="TextColor" Value="Black"></Setter>
@@ -40,13 +40,13 @@
 
 
                             <Label Text="{Binding Date, StringFormat='{0:dd}'}"  HorizontalTextAlignment="Center" FontSize="{x:OnIdiom Phone='Body', Tablet='Medium'}"  
-                                   Style="{StaticResource Objektiv Mk1 Light}">
+                                   Style="{StaticResource Objektiv Mk1 XBold}">
                                 <Label.Triggers>
                                     <DataTrigger TargetType="Label" Binding="{Binding IsCurrentDate}" Value="True">
-                                        <Setter Property="TextColor" Value="WhiteSmoke"></Setter>
+                                        <Setter Property="TextColor" Value="#E7E8D1"></Setter>
                                     </DataTrigger>
                                     <DataTrigger TargetType="Label" Binding="{Binding IsCurrentDate}" Value="False">
-                                        <Setter Property="TextColor" Value="Black"></Setter>
+                                        <Setter Property="TextColor" Value="#31473A"></Setter>
                                     </DataTrigger>
                                 </Label.Triggers>
                             </Label>
@@ -59,11 +59,11 @@
 
                         <Frame.Triggers>
                             <DataTrigger TargetType="Frame" Binding="{Binding IsCurrentDate}" Value="False">
-                                <Setter Property="BackgroundColor" Value="WhiteSmoke"></Setter>
+                                <Setter Property="BackgroundColor" Value="#E7E8D1"></Setter>
                             </DataTrigger>
 
                             <DataTrigger TargetType="Frame" Binding="{Binding IsCurrentDate}" Value="True">
-                                <Setter Property="BackgroundColor" Value="#014289"></Setter>
+                                <Setter Property="BackgroundColor" Value="#20948B"></Setter>
                             </DataTrigger>
                         </Frame.Triggers>
                     </Frame>

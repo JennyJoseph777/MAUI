@@ -9,7 +9,7 @@
     Title="AppTest">
 
     <Shell.Behaviors>
-        <xct:StatusBarBehavior StatusBarColor="Black" StatusBarStyle="LightContent" />
+        <xct:StatusBarBehavior StatusBarColor="#E7E8D1" StatusBarStyle="LightContent" />
     </Shell.Behaviors>
 
     <ShellContent      
