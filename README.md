@@ -9,7 +9,7 @@ This Project contains Multiple Features as mentioned below for Mobile developmen
 
  ![image](https://github.com/JennyJoseph777/MAUI/assets/39948889/190388b7-eb6b-408b-963c-ca466b120f25)                  ![image](https://github.com/JennyJoseph777/MAUI/assets/39948889/58e45351-bb22-4684-ae78-5284a15618f1)
   
-- Calander View - Customised Scrollable Horizontal Calendar View limited with 2 weeks display.
+- Calendar View - Customised Scrollable Horizontal Calendar View limited with 2 weeks display.
 
 ![image](https://github.com/JennyJoseph777/MAUI/assets/39948889/2e774ef5-0029-401f-ae45-e2d999f3ec0c)
 
@@ -27,4 +27,4 @@ This Project contains Multiple Features as mentioned below for Mobile developmen
 
 - Usage of Absolute Layout
 
-- Setting Stauts Bar, Navigation Bar and Font Color
+- Setting Status Bar, Navigation Bar and Font Color
