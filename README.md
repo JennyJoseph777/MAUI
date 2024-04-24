@@ -32,3 +32,6 @@ This Project contains Multiple Features as mentioned below for Mobile developmen
 - Usage of Absolute Layout
 
 - Setting Status Bar, Navigation Bar and Font Color
+
+https://github.com/JennyJoseph777/MAUI/assets/39948889/d3ed4227-88b2-4780-a670-8d59c6d173a9
+
