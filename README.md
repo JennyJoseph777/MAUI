@@ -19,6 +19,11 @@ This Project contains Multiple Features as mentioned below for Mobile developmen
    - Opening the Web Page inside the App
    - Opening the Web Page directly on the Browser
 
+- Collection View (Using Static data)
+
+ ![image](https://github.com/JennyJoseph777/MAUI/assets/39948889/864836fe-5adb-4a3c-9f49-871ff03885c5)
+
+  
 - Changing Fonts styles in MAUI 
 
 - Icon Display in MAUI using FontAwesome
