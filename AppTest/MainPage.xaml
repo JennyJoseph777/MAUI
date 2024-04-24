@@ -37,12 +37,12 @@
                                      FontFamily="Solid6"
                                      Color="#31473A"
                                      Size="{x:OnIdiom Phone='25', Tablet='28'}"              
-                                     Glyph="{x:Static fa:FontAwesomeIconsNew.UserTie}">
+                                     Glyph="{x:Static fa:FontAwesomeIconsNew.Folder}">
                                 </FontImageSource>
                             </Image.Source>
                         </Image>
 
-                        <Label Text="Employee"  TextColor="#31473A" Style="{StaticResource Objektiv Mk1 XBold}" Padding="5" 
+                        <Label Text="Folder"  TextColor="#31473A" Style="{StaticResource Objektiv Mk1 XBold}" Padding="5" 
                                              VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
                                              FontSize="{OnIdiom  Phone= {OnPlatform iOS=13, Android=14}, Tablet= {OnPlatform Android=16}}">
                         </Label>

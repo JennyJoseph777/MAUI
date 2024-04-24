@@ -62,9 +62,11 @@ namespace AppTest.ViewModels
             {         
                 MenuNumber = "Menu I",              
                 SoupType = "Carrot and Ginger Soup",       
-                MainmenuType = "Pizza with Chicken and Olive toppings",               
-                SaladType = "Mixed vegetables and prawns with exotic sauces",
-                DessertType = "Tiramissu"
+                MainmenuType = "Garlic & herb roasted crimini mushrooms stuffed in a russet potato with sour cream",               
+                SaladType = "Mixed vegetables and prawns with exotic sauces"+
+                "\n" +
+                "French fries",
+                DessertType = "Tiramisu"
 
             });
 
@@ -72,12 +74,12 @@ namespace AppTest.ViewModels
             Meals.Add(new CollectionModel
             {
                 MenuNumber = "Menu II",
-                SoupType = "Cream of Mushroom Soup",
-                MainmenuType = "Rice with Beef and Vegies Curry",
-                SaladType = "Mixed vegetables and Chicken with exotic sauces" +
+                SoupType = "Creamy Mushroom Soup",
+                MainmenuType = "French style trout,basted with a lemon-parsley sauce",
+                SaladType = "Fresh salads served on the cold buffet" +
                 "\n" +
-                "Spiced Rice with Spinach",
-                DessertType = "Mixed Fruit yogurt"
+                "Baked potatos",
+                DessertType = "Stracciatella yogurt"
 
             });
 
@@ -86,18 +88,18 @@ namespace AppTest.ViewModels
                 MenuNumber = "Menu III",
                 SoupType = "Hot and Sour Soup",
                 MainmenuType = "Chicken Burger with French Fries",
-                SaladType = "Mixed vegetables with exotic sauces",
-                DessertType = "Tiramissu"
+                SaladType = "Fresh salads served on the cold buffet",
+                DessertType = "Chocolate cheese cake bowl with oreo crumbles and whipped cream"
 
             });
 
             Meals.Add(new CollectionModel
             {
                 MenuNumber = "Menu IV",
-                SoupType = "Tomato Soup",
-                MainmenuType = "Burrito with minced Beef, Avacado and beans," ,
-                SaladType = "Mixed vegetables and Tofu with exotic sauces",
-                DessertType = "Tiramissu"
+                SoupType = "Creamy summer squash",
+                MainmenuType = "Burito with minced Beef, Avacado and beans," ,
+                SaladType = "Fresh tofu salad with exotic sauces",
+                DessertType = "Peach yoghurt"
 
             });
 
