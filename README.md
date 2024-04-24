@@ -11,7 +11,7 @@ This Project contains Multiple Features as mentioned below for Mobile developmen
   
 - Calendar View - Customised Scrollable Horizontal Calendar View limited with 2 weeks display.
 
-![image](https://github.com/JennyJoseph777/MAUI/assets/39948889/122cc14c-bb7a-4da1-84bc-cb05e027bcec)
+https://github.com/JennyJoseph777/MAUI/assets/39948889/d3ed4227-88b2-4780-a670-8d59c6d173a9
 
 [Note: Further can be exteded to display Data with respect to Date using selectedDate attribute]
 
@@ -33,5 +33,5 @@ This Project contains Multiple Features as mentioned below for Mobile developmen
 
 - Setting Status Bar, Navigation Bar and Font Color
 
-https://github.com/JennyJoseph777/MAUI/assets/39948889/d3ed4227-88b2-4780-a670-8d59c6d173a9
+
 
