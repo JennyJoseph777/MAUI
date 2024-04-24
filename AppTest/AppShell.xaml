@@ -6,14 +6,12 @@
     xmlns:xct="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
     xmlns:local="clr-namespace:AppTest"
     Shell.FlyoutBehavior="Disabled"
-    Title="AppTest">
+    Title="AppTest" NavigationPage.HasBackButton="True" NavigationPage.HasNavigationBar="False">
 
     <Shell.Behaviors>
         <xct:StatusBarBehavior StatusBarColor="#E7E8D1" StatusBarStyle="LightContent" />
     </Shell.Behaviors>
 
-    <ShellContent      
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+   
 
 </Shell>

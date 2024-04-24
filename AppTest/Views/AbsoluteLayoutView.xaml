@@ -2,9 +2,19 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:xct="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
-             x:Class="AppTest.Views.AbsoluteLayoutView" Title="Absolute Layout View">
-   
-    
+             x:Class="AppTest.Views.AbsoluteLayoutView">
+
+    <NavigationPage.TitleView>
+        <Label Text="Absolute Layout View"  HorizontalOptions="StartAndExpand" VerticalTextAlignment="Center"
+              Style="{StaticResource Objektiv Mk1 XBold}" Padding="1" TextColor="#31473A">
+            <Label.FontSize>
+                <OnPlatform x:TypeArguments="x:Double">
+                    <On Platform="iOS" Value="16" />
+                    <On Platform="Android" Value="{OnIdiom Phone='16', Tablet='19'}" />
+                </OnPlatform>
+            </Label.FontSize>
+        </Label>
+    </NavigationPage.TitleView>
     <ContentPage.Content>
 
         <StackLayout  Padding="{x:OnIdiom Phone='10', Tablet='15'}" BackgroundColor="#E7E8D1">
@@ -28,7 +38,7 @@
                          Aspect="AspectFit" />
 
 
-                    <StackLayout x:Name="ViewControls" Padding="{x:OnIdiom Phone='3,0,2,0', Tablet='11,0,7,0'}" Orientation="Vertical" Margin="{OnIdiom Phone='5', Tablet='8'}" 
+                    <StackLayout x:Name="ViewControls" Padding="{x:OnIdiom Phone='8,0,2,0', Tablet='11,0,7,0'}" Orientation="Vertical" Margin="{OnIdiom Phone='5', Tablet='8'}" 
                           BackgroundColor="#66000000" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Opacity="0.8"
                           AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="{x:OnIdiom Phone='0.4,0.5,1.03,1.02', Tablet='0.8,0.5,1,1.04'}">
 

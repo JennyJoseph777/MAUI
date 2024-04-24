@@ -3,7 +3,20 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:xct="http://schemas.microsoft.com/dotnet/2022/maui/toolkit" 
              xmlns:d="http://schemas.microsoft.com/dotnet/2021/maui/design"
-             x:Class="AppTest.Views.PdfGridDisplay" BackgroundColor="#31473A" Title="PDF Grid">
+             x:Class="AppTest.Views.PdfGridDisplay" BackgroundColor="#31473A" >
+
+
+    <NavigationPage.TitleView>
+        <Label Text="PDF GRID"  HorizontalOptions="StartAndExpand" VerticalTextAlignment="Center"
+              Style="{StaticResource Objektiv Mk1 XBold}" Padding="1" TextColor="#31473A">
+            <Label.FontSize>
+                <OnPlatform x:TypeArguments="x:Double">
+                    <On Platform="iOS" Value="16" />
+                    <On Platform="Android" Value="{OnIdiom Phone='16', Tablet='19'}" />
+                </OnPlatform>
+            </Label.FontSize>
+        </Label>
+    </NavigationPage.TitleView>
 
 
     <ContentPage.Content>

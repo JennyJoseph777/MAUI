@@ -13,7 +13,7 @@ using Microsoft.Maui;
 using AppTest.Models.Antonis;
 
 
-namespace AppTest.Views
+namespace AppTest.Controls
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class HorizontalCalendarPage : StackLayout

@@ -3,8 +3,21 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:fa="clr-namespace:AppTest.Helpers"
               xmlns:xct="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
-             x:Class="AppTest.MainPage" BackgroundColor="#E7E8D1" Title="HOME">
-   
+             x:Class="AppTest.MainPage" BackgroundColor="#E7E8D1">
+    
+    
+    <NavigationPage.TitleView>
+        <Label Text="HOME"  HorizontalOptions="StartAndExpand" VerticalTextAlignment="Center"
+              Style="{StaticResource Objektiv Mk1 XBold}" Padding="1" TextColor="#31473A">
+            <Label.FontSize>
+                <OnPlatform x:TypeArguments="x:Double">
+                    <On Platform="iOS" Value="16" />
+                    <On Platform="Android" Value="{OnIdiom Phone='16', Tablet='19'}" />
+                </OnPlatform>
+            </Label.FontSize>
+        </Label>
+    </NavigationPage.TitleView>
+
     <ContentPage.Behaviors>
         <xct:StatusBarBehavior StatusBarColor="#31473A" StatusBarStyle="LightContent" />
     </ContentPage.Behaviors>
@@ -36,7 +49,7 @@
                     </StackLayout>
                 </Frame>
 
-                <Frame BorderColor="#31473A" BackgroundColor="Transparent" CornerRadius="8" HeightRequest="90" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <Frame BorderColor="#31473A" BackgroundColor="Transparent" CornerRadius="8" HasShadow="False"  HeightRequest="90" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
                     <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
                         <Image>
                             <Image.Source>
@@ -123,6 +136,23 @@
                     <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_3" />
                 </Frame.GestureRecognizers>
             </Frame>
+
+     <!--.....................................................................Using Collection View...........................................................................-->
+
+            <Frame   Padding="20" Margin="10" BackgroundColor="#31473A" CornerRadius="5"  HeightRequest="60"     
+                         HorizontalOptions="FillAndExpand"  VerticalOptions="CenterAndExpand"
+                         TouchEffect.NativeAnimationColor="#EDF4F2" TouchEffect.NormalAnimationDuration="100"  
+                         TouchEffect.NativeAnimation="{OnIdiom  Phone= {OnPlatform iOS=False, Android=True}, Tablet= {OnPlatform Android=True}}"
+                         TouchEffect.PressedOpacity="{OnIdiom  Phone= {OnPlatform iOS=0.4, Android=0.9}, Tablet= {OnPlatform Android=0.9}}">
+
+
+                <Label Text="Collection View" TextColor="#EDF4F2" Style="{StaticResource Objektiv Mk1 XBold}" HorizontalOptions="CenterAndExpand" FontSize="Header"></Label>
+
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_4" />
+                </Frame.GestureRecognizers>
+            </Frame>
+
 
         </VerticalStackLayout>
     </ScrollView>

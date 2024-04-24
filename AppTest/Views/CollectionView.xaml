@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             xmlns:local="clr-namespace:AppTest.ViewModels" 
+             xmlns:model="clr-namespace:AppTest.Models"
+             x:Class="AppTest.Views.CollectionView">
+   
+    <NavigationPage.TitleView>
+        <Label Text="Collection View"  HorizontalOptions="StartAndExpand" VerticalTextAlignment="Center"
+              Style="{StaticResource Objektiv Mk1 XBold}" Padding="1" TextColor="#31473A">
+            <Label.FontSize>
+                <OnPlatform x:TypeArguments="x:Double">
+                    <On Platform="iOS" Value="16" />
+                    <On Platform="Android" Value="{OnIdiom Phone='16', Tablet='19'}" />
+                </OnPlatform>
+            </Label.FontSize>
+        </Label>
+    </NavigationPage.TitleView>
+
+    <ContentPage.Content>
+
+        <Grid x:DataType="local:CollectionViewModel" BackgroundColor="#31473A" 
+             Margin="5,0,5,5" Padding="5" HorizontalOptions="FillAndExpand">
+
+                <CollectionView ItemsSource="{Binding Meals}" HorizontalOptions="FillAndExpand"  VerticalOptions="FillAndExpand">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate x:DataType="model:CollectionModel">
+
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"></RowDefinition>
+                                    <RowDefinition Height="*"></RowDefinition>
+                                    <RowDefinition Height="*"></RowDefinition>
+                                    <RowDefinition Height="*"></RowDefinition>
+                                </Grid.RowDefinitions>
+
+
+                                <Frame  IsClippedToBounds="True"  CornerRadius="5" Padding="9" Margin="9,12,9,0"  BackgroundColor="#E7E8D1" >
+                                    <StackLayout BackgroundColor="#E7E8D1" Orientation="Vertical" HorizontalOptions="FillAndExpand" 
+                                            VerticalOptions="FillAndExpand" IsClippedToBounds="True" >
+
+                                        <Label  Text="{Binding MenuNumber}" Padding="{OnIdiom Phone='6', Tablet='10'}" Style="{StaticResource Objektiv Mk1 XBold}" 
+                                          VerticalTextAlignment="Center" FontAttributes="None" FontSize="{OnIdiom Phone='Small', Tablet='Medium'}" Grid.Row="0"
+                                          TextColor="#EDF4F2"  BackgroundColor="#31473A"/>
+
+
+
+                                        <Label  Text="Soup"  Padding="{OnIdiom Phone='6', Tablet='10'}"   FontAttributes="Bold" FontSize="{OnIdiom Phone='Small', Tablet='Medium'}"
+                                           Style="{StaticResource Objektiv Mk1 XBold}" 
+                                           TextColor="#31473A" BackgroundColor="#8A9A5B" Grid.Row="1"/>
+
+
+                                        <Label  Text="{Binding SoupType}"  FontAttributes="None" FontSize="{OnIdiom Phone='Small', Tablet='Medium'}" Style="{StaticResource Objektiv Mk1 Light}"
+                                               Grid.Row="2" TextColor="#31473A" Padding="{OnIdiom Phone='3', Tablet='5'}"></Label>
+
+
+                                        <Label  Text="Mainmenu" Padding="{OnIdiom Phone='6', Tablet='10'}"   FontAttributes="Bold" FontSize="{OnIdiom Phone='Small', Tablet='Medium'}" 
+                                                Style="{StaticResource Objektiv Mk1 XBold}"
+                                                TextColor="#31473A" BackgroundColor="#8A9A5B" Grid.Row="3" />
+
+                                        <Label  Text="{Binding MainmenuType}"   FontAttributes="None" FontSize="{OnIdiom Phone='Small', Tablet='Medium'}" Style="{StaticResource Objektiv Mk1 Light}"
+                                                        Grid.Row="4" TextColor="#31473A" Padding="{OnIdiom Phone='3', Tablet='5'}"></Label>
+
+                                        <Label  Text="Salad" Padding="{OnIdiom Phone='6', Tablet='10'}"   FontAttributes="Bold" FontSize="{OnIdiom Phone='Small', Tablet='Medium'}"
+                                                Style="{StaticResource Objektiv Mk1 XBold}"
+                                                TextColor="#31473A" BackgroundColor="#8A9A5B" Grid.Row="5"/>
+
+
+                                        <Label  Text="{Binding SaladType}"   FontAttributes="None" FontSize="{OnIdiom Phone='Small', Tablet='Medium'}" Style="{StaticResource Objektiv Mk1 Light}"
+                                                Grid.Row="6" TextColor="#31473A" Padding="{OnIdiom Phone='3', Tablet='5'}"></Label>
+
+                                        <Label Text="Dessert" Padding="{OnIdiom Phone='6', Tablet='10'}"  FontAttributes="Bold" FontSize="{OnIdiom Phone='Small', Tablet='Medium'}" 
+                                               Style="{StaticResource Objektiv Mk1 XBold}"
+                                               TextColor="#31473A"  BackgroundColor="#8A9A5B"  Grid.Row="7" />
+
+
+                                        <Label  Text="{Binding DessertType}"   FontAttributes="None" FontSize="{OnIdiom Phone='Small', Tablet='Medium'}" Style="{StaticResource Objektiv Mk1 Light}"
+                                                    Grid.Row="8" TextColor="#31473A" Padding="{OnIdiom Phone='3', Tablet='5'}"></Label>
+
+                                    </StackLayout>
+                                </Frame>
+                            </Grid>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+           
+        </Grid>
+
+    </ContentPage.Content>
+</ContentPage>

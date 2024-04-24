@@ -1,9 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="AppTest.Views.WebViewPage" BackgroundColor="#E7E8D1" Title="Web View">
-   
-    
+             x:Class="AppTest.Views.WebViewPage" BackgroundColor="#E7E8D1">
+
+    <NavigationPage.TitleView>
+        <Label Text="Web View"  HorizontalOptions="StartAndExpand" VerticalTextAlignment="Center"
+              Style="{StaticResource Objektiv Mk1 XBold}" Padding="1" TextColor="#31473A">
+            <Label.FontSize>
+                <OnPlatform x:TypeArguments="x:Double">
+                    <On Platform="iOS" Value="16" />
+                    <On Platform="Android" Value="{OnIdiom Phone='16', Tablet='19'}" />
+                </OnPlatform>
+            </Label.FontSize>
+        </Label>
+    </NavigationPage.TitleView>
+
     <ContentPage.Content>
         <VerticalStackLayout Padding="10,0"
                         Spacing="19">

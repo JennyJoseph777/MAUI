@@ -29,9 +29,16 @@ namespace AppTest
             await Navigation.PushAsync(new WebViewPage());
         }
 
+        //-------------------------------------------Absolute Layout View-----------------------------------------------------------
         private async void TapGestureRecognizer_Tapped_3(object sender, TappedEventArgs e)
         {
             await Navigation.PushAsync(new AbsoluteLayoutView());
+        }
+
+        //-------------------------------------------Collection View-----------------------------------------------------------
+        private async void TapGestureRecognizer_Tapped_4(object sender, TappedEventArgs e)
+        {
+            await Navigation.PushAsync(new Views.CollectionView());
         }
     }
 

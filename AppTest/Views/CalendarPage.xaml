@@ -1,10 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:customControls="clr-namespace:AppTest.Views"
-             x:Class="AppTest.Views.CalendarPage" BackgroundColor="#E7E8D1" Title="Calendar View">
-  
-    
+             xmlns:customControls="clr-namespace:AppTest.Controls"
+             x:Class="AppTest.Views.CalendarPage" BackgroundColor="#E7E8D1">
+   
+    <NavigationPage.TitleView>
+        <Label Text="Calendar View"  HorizontalOptions="StartAndExpand" VerticalTextAlignment="Center"
+              Style="{StaticResource Objektiv Mk1 XBold}" Padding="1" TextColor="#31473A">
+            <Label.FontSize>
+                <OnPlatform x:TypeArguments="x:Double">
+                    <On Platform="iOS" Value="16" />
+                    <On Platform="Android" Value="{OnIdiom Phone='16', Tablet='19'}" />
+                </OnPlatform>
+            </Label.FontSize>
+        </Label>
+    </NavigationPage.TitleView>
+
+
     <ContentPage.Content>
         <Grid HorizontalOptions="FillAndExpand" >
             <Grid.RowDefinitions>
