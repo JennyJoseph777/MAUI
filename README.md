@@ -21,7 +21,7 @@ https://github.com/JennyJoseph777/MAUI/assets/39948889/d3ed4227-88b2-4780-a670-8
 
 - Collection View (Using Static data)
 
-![image](https://github.com/JennyJoseph777/MAUI/assets/39948889/14333f8f-7b00-402c-b6d8-c4178795d709)
+https://github.com/JennyJoseph777/MAUI/assets/39948889/bd3a85a6-a13c-4f53-9b08-c181e7ba3763
 
 - Changing Fonts styles in MAUI 
 
