@@ -3,7 +3,7 @@ This Project contains Multiple Features as mentioned below for Mobile developmen
 
 ![image](https://github.com/JennyJoseph777/MAUI/assets/39948889/c7fb0aec-7f81-483b-a720-ed2e4f77ec88)
 
-- PDF Display (Using Static Files and Images)
+- PDF Display (Using Static Files and Images) with Zoom-in and Zoom-out functionality.
    - Android - using pdfjs library
    - iOS - Native Display
 
